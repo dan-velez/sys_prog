@@ -15,3 +15,11 @@
 
 * **THERE IS NO INPUT OR OUTPUT** in C.
 * `printf` is defined at the OS standard library level.
+* All **I/O** is defined by the standard library, not by the language itself.
+
+
+## Compilation ##
+* Different from interpretation, a copy of the working program is always
+  available.
+* Programmer can edit the program as much as he wants, without affecting
+  the working copy of the program.

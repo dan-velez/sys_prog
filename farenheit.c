@@ -1,18 +1,13 @@
 #include <stdio.h>
 
-int test_types()
-{
-    long x;
-    double y;
-    short z;
-    char a;
-    char* b;
-}
+/* Define symbolic constants. */
+#define UPPER 300
+#define LOWER 0
+#define STEP 20
 
-int main()
+void converter_1()
 {
-    /* Print farenheit-celsius table. */
-
+    /* Convert farenheit to celsius. */
     float fahr, celsius;
     float lower, upper, step;
 
@@ -22,20 +17,27 @@ int main()
 
     fahr = lower;
 
+    printf("Farenheit \t Celsius\n");
+    printf("------------------------\n");
     while (fahr <= upper) {
         celsius = (5.0 / 9.0) * (fahr - 32.0);
-        printf("%3.0f\t%6.1f\n", fahr, celsius);
+
+        /* Print at least 3 chars wide, 6 chars wide. */
+        printf("%10.0f   |  %8.1f\n", fahr, celsius);
         fahr = fahr + step;
     }
+}
 
-    /* Integer arithmic is truncated to zero. */
-    int z = 5 / 9; 
-    float y = 5.0 / 9.0;
-    printf("%d %f", z, y);
+void converter_2()
+{
+    /* A different way to write temperature conversion program. */
+    int fahr;
+    for (fahr = UPPER; fahr >= LOWER; fahr -= STEP)
+        printf("%3d %6.1f\n", fahr, (5.0/9.0) * (fahr-32));
+}
 
-    int a = 5;
-    float b = 9.0;
-
-    float c = a / b;
-    int d = a / b;
+int main()
+{
+    // converter_1();
+    converter_2();
 }

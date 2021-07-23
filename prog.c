@@ -1,5 +1,4 @@
-/* ~/projects/sys_prog/
- * Help stay focused on development.
+/* Help stay focused on development.
  * Create repo for C code. Add books to repo.
  *
  * Compiler: x86_64-w64-mingw32-gcc.exe
@@ -18,6 +17,7 @@
 
 int main(int argc, char** argv)
 {
+    /* Test for loops. */
     int i = 0;
     for(i = 0; i < 10; i++) {
         printf("%d\n", i);
@@ -28,7 +28,12 @@ int gcd(int u, int v)
 {
     int t;
     while(u < v) {
-
+        if (u < v) {
+            t = v;
+            v = u;
+            u = t;
+        }
     }
+    u = u-v;
     return v;
 }
