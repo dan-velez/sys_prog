@@ -1,5 +1,5 @@
-#include <stdio.h>
 /* Copy input to output, replacing multi blanks with single blanks. */
+#include <stdio.h>
 
 void replace_blanks()
 {
