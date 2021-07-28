@@ -21,7 +21,7 @@ void count_words()
     while ((c = getchar()) != EOF) {
         
     }
-    printf("Done.\n");
+    printf("Hello world!\n");
     // printf("Lines: %d Words: %d Chars: %d\n", nl, nw, nc);
 }
 
